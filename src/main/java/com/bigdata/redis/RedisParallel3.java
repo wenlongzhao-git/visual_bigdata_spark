@@ -1,6 +1,6 @@
 package com.bigdata.redis;
 
-import com.shunicom.util.EntityUtil;
+import com.bigdata.util.EntityUtil;
 import org.apache.log4j.Logger;
 import redis.clients.jedis.Jedis;
 import redis.clients.jedis.Pipeline;

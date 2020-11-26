@@ -1,8 +1,8 @@
 
 package com.bigdata.spark;
 
-import com.shunicom.redis.MyJedisPool2;
-import com.shunicom.util.EntityUtil;
+import com.bigdata.redis.MyJedisPool2;
+import com.bigdata.util.EntityUtil;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.common.serialization.StringDeserializer;
 import org.apache.log4j.Logger;

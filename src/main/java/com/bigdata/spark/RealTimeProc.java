@@ -70,7 +70,8 @@ public class RealTimeProc extends SnapshotProc2{
 	 * @param param
 	 * @param savePath
 	 */
-	protected void writeSnapshot2hdfs(JavaRDD<String> locData,Map<String,String> param, String savePath){
+	@Override
+    protected void writeSnapshot2hdfs(JavaRDD<String> locData, Map<String,String> param, String savePath){
 		//实时计算不需要持久化，只是为重写父类方法
 		return;
 	}

@@ -14,8 +14,8 @@ public class SparkDemo01 {
        // args(0).split(',').map(jars += _);
 
         SparkConf conf = new SparkConf()
-                .setAppName("SparkDemo01");
-                //.setMaster("local");
+                .setAppName("SparkDemo01")
+                .setMaster("local");
 
         JavaSparkContext sc = new JavaSparkContext(conf);
 

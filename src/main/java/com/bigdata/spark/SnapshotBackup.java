@@ -1,6 +1,6 @@
 package com.bigdata.spark;
 
-import com.shunicom.util.AppProfile;
+import com.bigdata.util.AppProfile;
 import org.apache.log4j.Logger;
 import org.apache.spark.api.java.JavaSparkContext;
 
@@ -70,6 +70,7 @@ public class SnapshotBackup extends SnapshotProc2 implements Serializable{
 	/**
 	 * default方法重写
 	 */
+	@Override
 	public void doDefault(Map<String,String> param){
 		if(param == null){
 			log.error("参数param为空");
@@ -81,6 +82,7 @@ public class SnapshotBackup extends SnapshotProc2 implements Serializable{
 	/**
 	 * default方法重写，仅保留快照沉淀的逻辑
 	 */
+	@Override
 	protected void doDefault(Map<String,String> param, Map<String,List<String>> disList){
 		if(param == null){
 			log.error("参数param为空");

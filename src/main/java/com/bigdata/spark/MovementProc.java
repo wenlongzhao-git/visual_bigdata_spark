@@ -1,8 +1,8 @@
 package com.bigdata.spark;
 
-import com.shunicom.jdbc.DBOperation;
-import com.shunicom.util.DateUtil;
-import com.shunicom.util.EntityUtil;
+import com.bigdata.jdbc.DBOperation;
+import com.bigdata.util.DateUtil;
+import com.bigdata.util.EntityUtil;
 import org.apache.log4j.Logger;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
@@ -105,6 +105,7 @@ public class MovementProc extends SnapshotProc2{
 	 * 动态从数据库获取参与计算的配置信息
 	 * @return
 	 */
+	@Override
 	protected Map<String,List<String>> loadListParam(){
 		long start = System.currentTimeMillis();
 		Map<String,List<String>> listParam = DBOperation.loadListParamHistory();
@@ -122,7 +123,8 @@ public class MovementProc extends SnapshotProc2{
 	 * 6.获取进入人群快照，计算人群画像
 	 * 7.后去离开人群快照，计算人群画像
 	 */
-	protected void doHistoryProc(Map<String,String> param, Map<String,List<String>> disList,List<String> timeRange){
+	@Override
+	protected void doHistoryProc(Map<String,String> param, Map<String,List<String>> disList, List<String> timeRange){
 		if(param == null){
 			log.error("参数param为空");
 			return;
@@ -153,7 +155,8 @@ public class MovementProc extends SnapshotProc2{
 	 * 6.获取进入人群快照，计算人群画像
 	 * 7.后去离开人群快照，计算人群画像
 	 */
-	protected void doDefault(Map<String,String> param, Map<String,List<String>> disList){
+	@Override
+    protected void doDefault(Map<String,String> param, Map<String,List<String>> disList){
 		if(param == null){
 			log.error("参数param为空");
 			return;
@@ -394,8 +397,9 @@ public class MovementProc extends SnapshotProc2{
 	 * @param resultGrid
 	 * @param resultSub
 	 */
-	protected void doOutPut(Map<String,String> param,JavaPairRDD<String, Integer> resultFan,
-			JavaPairRDD<String, Integer> resultGrid,JavaPairRDD<String, Integer> resultSub){
+	@Override
+	protected void doOutPut(Map<String,String> param, JavaPairRDD<String, Integer> resultFan,
+							JavaPairRDD<String, Integer> resultGrid, JavaPairRDD<String, Integer> resultSub){
 		long start = System.currentTimeMillis();
 		log.info("输出结果到hbase");
 		writeToHBase(resultFan, param);
@@ -407,6 +411,7 @@ public class MovementProc extends SnapshotProc2{
 	 * @param result
 	 * @param param
 	 */
+	@Override
 	protected boolean writeToHBase(JavaPairRDD<String, Integer> result, Map<String,String> param){
 		if(result == null || result.isEmpty()){
 			log.error("======result is empty [writeToHBase] ");

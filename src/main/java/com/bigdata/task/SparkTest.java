@@ -1,6 +1,6 @@
 package com.bigdata.task;
 
-import com.shunicom.util.EntityUtil;
+import com.bigdata.util.EntityUtil;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.TableName;

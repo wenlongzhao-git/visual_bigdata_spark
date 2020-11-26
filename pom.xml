@@ -99,6 +99,17 @@
             <version>1.2.6</version>
         </dependency>
 
+        <!--统一netty版本-->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>4.1.17.Final</version>
+        </dependency>
+
+
+
+
+
         <!--Oracle 数据库相关-->
         <dependency>
             <groupId>oracle</groupId>

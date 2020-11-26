@@ -3,12 +3,12 @@ package com.bigdata.spark;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.shunicom.jdbc.DBOperation;
-import com.shunicom.redis.RedisParallel3;
-import com.shunicom.util.AppProfile;
-import com.shunicom.util.DateUtil;
-import com.shunicom.util.EntityUtil;
-import com.shunicom.util.MD5EncryptTools;
+import com.bigdata.jdbc.DBOperation;
+import com.bigdata.redis.RedisParallel3;
+import com.bigdata.util.AppProfile;
+import com.bigdata.util.DateUtil;
+import com.bigdata.util.EntityUtil;
+import com.bigdata.util.MD5EncryptTools;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.TableName;

@@ -1,6 +1,6 @@
 package com.bigdata.task;
 
-import com.shunicom.jdbc.DBOperation;
+import com.bigdata.jdbc.DBOperation;
 import org.apache.log4j.Logger;
 
 import java.io.BufferedWriter;
