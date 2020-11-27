@@ -1,0 +1,217 @@
+{
+	"@type":"com.huawei.data.integration.core.stage.load.txt.TextLoadDataStage",
+	"afterExpression":"",
+	"algorithm":0,
+	"beforeExpression":"",
+	"checkPoint":false,
+	"code":"H002",
+	
+	"codeType":"UTF-8",											编码格式
+	"compressType":0,											压缩类型
+	"delimiter":"|",											分隔符
+	"desc":"",													描述
+	"distributeKeyInfo":{										分布键
+		"distributeKeySelectMode":"Auto",
+		"distributedKeys":[]
+	},
+	"fileOptions":1,
+	"filePath":"/1Aflygar/",									文件路径
+	"filePattern":"3g_tel_prod_#flow.startDataTime#.txt",		文件名
+	"fileType":1,												文件类型
+	"hadoopClusterId":"",										hadoop集群
+	"hadoopExtendInfo":{"@type":"java.util.HashMap"},			hadoop用户名
+	"headRowCount":0,
+	"id":"HDI1511334126277",									编号
+	"inputGroups":[												输入组
+		{			
+			"batchDetail":false,								
+			"columns":[											列
+				{
+					"byteSize":32,
+					"check":"drop",
+					"columnId":"1512991048078198321",			列ID
+					"columnType":0,								列类型
+					"dataType":0,								数据类型
+					"defaultValue":"",							默认值
+					"distributeKey":"false",
+					"enumeration":"",
+					"expr":{
+						"expr":"phone",							表达式字段名
+						"type":0								表达式字段类型
+					},
+					"extractMode":1,							
+					"fixWidthLR":"left",						对齐方式
+					"isIndex":"false",
+					"isNull":false,								
+					"isWrap":false,
+					"lookupDealType":0,
+					"mongodbTargetType":0,
+					"name":"phone",								字段名
+					"null":false,
+					"precision":0,
+					"refField":"",
+					"scale":0,
+					"selected":false,
+					"sourceColumnId":"15130483011264779",		源字段id
+					"sourceColumnIndex":0,
+					"sqlDetailType":-1,
+					"sqlDetailType2String":"",
+					"sqlType":12,
+					"srcGroupName":"H007",
+					"start":0,
+					"updateKey":false,
+					"valueRange":"",
+					"width":0,
+					"wrap":false
+				},
+				{
+					"byteSize":32,
+					"check":"drop",
+					"columnId":"1512991048079198322",
+					"columnType":0,
+					"dataType":0,
+					"defaultValue":"",
+					"distributeKey":"false",
+					"enumeration":"",
+					"expr":{
+						"expr":"PRODUCT_ID",
+						"type":0
+					},
+					"extractMode":1,
+					"fixWidthLR":"left",
+					"isIndex":"false",
+					"isNull":false,
+					"isWrap":false,
+					"lookupDealType":0,
+					"mongodbTargetType":0,
+					"name":"product_id",
+					"null":false,
+					"precision":0,
+					"refField":"",
+					"scale":0,
+					"selected":false,
+					"sourceColumnId":"15130483011254778",
+					"sourceColumnIndex":1,
+					"sqlDetailType":-1,
+					"sqlDetailType2String":"",
+					"sqlType":12,
+					"srcGroupName":"H007",
+					"start":0,
+					"updateKey":false,
+					"valueRange":"",
+					"width":0,
+					"wrap":false
+				}
+			],
+			"id":"H007",
+			"name":"H007"
+		}
+	],
+	"isBatchKeyFieldSort":false,
+	"isDGstage":false,
+	"isHDFSFile":true,
+	"isLoadDataStore":false,
+	"isLoop":false,
+	"isPrintNullField":false,
+	"isPrintrowNo":false,
+	"isQuotationMark":false,
+	"isSingleQuotationMark":false,
+	"ldapUserId":"",
+	"lineSeparator":"CRLF",
+	"maxDiscardCnt":0L,
+	"maxErrorCnt":0L,
+	"maxFileRecord":"0",
+	"maxFileSize":0,
+	"mergeFactor":"1",
+	"multiThread":false,
+	"name":"HDFS文本加载1",
+	"nameValueDelimiter":":",
+	"numReducers":-1,
+	"outputEmptyFile":true,
+	"outputGroups":[
+		{
+			"batchDetail":false,
+			"columns":[
+				{
+					"byteSize":32,
+					"check":"drop",
+					"columnId":"15130483217664788",
+					"columnType":0,
+					"dataType":0,
+					"defaultValue":"",
+					"distributeKey":"false",
+					"enumeration":"",
+					"extractMode":1,
+					"fixWidthLR":"left",
+					"isIndex":"false",
+					"isNull":false,
+					"isWrap":false,
+					"lookupDealType":0,
+					"mongodbTargetType":0,
+					"name":"phone",
+					"null":false,
+					"precision":0,
+					"refField":"",
+					"scale":0,
+					"selected":false,
+					"sourceColumnId":"1512991048078198321",
+					"sourceColumnIndex":0,
+					"sourceColumnName":"phone",
+					"sqlDetailType":-1,
+					"sqlDetailType2String":"",
+					"sqlType":12,
+					"srcGroupName":"H007",
+					"start":0,
+					"updateKey":false,
+					"valueRange":"",
+					"width":0,
+					"wrap":false
+				},
+				{
+					"byteSize":32,
+					"check":"drop",
+					"columnId":"15130483217664789",
+					"columnType":0,
+					"dataType":0,
+					"defaultValue":"",
+					"distributeKey":"false",
+					"enumeration":"",
+					"extractMode":1,
+					"fixWidthLR":"left",
+					"isIndex":"false",
+					"isNull":false,
+					"isWrap":false,
+					"lookupDealType":0,
+					"mongodbTargetType":0,
+					"name":"product_id",
+					"null":false,
+					"precision":0,
+					"refField":"",
+					"scale":0,
+					"selected":false,
+					"sourceColumnId":"1512991048079198322",
+					"sourceColumnIndex":1,
+					"sourceColumnName":"product_id",
+					"sqlDetailType":-1,
+					"sqlDetailType2String":"",
+					"sqlType":12,
+					"srcGroupName":"H007",
+					"start":0,
+					"updateKey":false,
+					"valueRange":"",
+					"width":0,
+					"wrap":false
+				}
+			],
+			"id":"defaultColumnGroup",
+			"name":"defaultColumnGroup"
+		}
+	],
+	"parallel":true,
+	"priorityLevel":3,
+	"saveErrorRecord":false,
+	"skipFlag":false,
+	"stageType":45,
+	"startOutFileIndex":0,
+	"tailRowCount":0
+}

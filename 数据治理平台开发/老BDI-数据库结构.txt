@@ -1,0 +1,79 @@
+
+T_HDI_TASKRELAT t				处理依赖的关系
+T_HDI_TASKEXESTATE t			处理依赖的执行状态
+
+
+T_HDI_TASKEXEAVERTIME t			统计控制流内各个组件执行次数和总时间
+
+T_HDI_TASKDEF t					任务描述-控制流和流内的各个组件
+
+
+T_HDI_SCHEDULE					控制流程调度表
+
+T_HDI_PACKAGE					ETL目录信息表
+
+T_HDI_HOTFLOWINST				热流实例表-最近一次执行实例情况
+
+T_HDI_FLOWRUNFLG				流运行标记
+
+T_HDI_FLOWPARAM					流参数表----观察主要是关于调度的参数，如有效时间
+
+T_HDI_FLOWINFO					流程在线定义表--包含各个版本数据
+
+T_HDI_FLOWEXESTATE				流执行状态表
+
+T_HDI_DATATYPE					数据类型表
+
+T_BPM_PROCESSINSTANCE			此表包含有关活动流程实例的信息----不解
+
+T_BPM_PROCESSDEFINITION			此表包含部署到引擎的所有流程定义的详细信息。
+
+T_BPM_CUSTOM_VARIABLES			此表包含有关活动流程实例自定义变量的信息----不解
+
+T_BPM_CUST_ACT_VARS				此表包含有关活动自定义变量的信息----不解
+
+T_BPM_BRANCHEXECUTION			此表包含关于分支执行的信息----不解
+
+T_BPM_ACTIVITYTRACE				此表包含有关活动的信息，用于跟踪目的----不解
+
+
+
+
+
+
+
+
+
+
+
+
+T_HDI_SYSPARAM					系统参数表
+
+T_HDI_FUNCTION					函数定义表
+
+T_BPM_MARSHALLERS				该表包含编组器id和相应的名称
+
+T_BPM_EXCEPTIONINFO				对于流程实例/分支执行/活动可能发生异常。它们存储在这个表中
+
+T_BPM_ENGINECONFIG				此表包含在引擎启动期间读取的所有配置值的信息
+
+T_BPM_CLUSTERNODEINFO			该表包含集群中节点的信息
+
+T_BPM_CLUSTER_LOCKS				此表包含用于同步锁的集群相关模块
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
